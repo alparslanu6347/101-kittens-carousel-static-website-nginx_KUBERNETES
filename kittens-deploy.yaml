@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kittens-deploy
+  namespace: kittens-namespace  # sadece bu satır sayesinde bu isimde namespace oluşur
+  labels:
+    name: kittens-deploy
+    app: kittens-static-website
+spec:
+  replicas: 3
+  selector: 
+    matchLabels:
+      name: kittens-pod
+      app: kittens-static-website
+  minReadySeconds: 10
+  strategy:
+    type: RollingUpdate 
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 1
+  template:
+    metadata:
+      name: kittens-pod
+      labels:
+        name: kittens-pod
+        app: kittens-static-website
+    spec:
+      containers:
+        - name:  kittens
+          image: alparslanu6347/kittens-nginx:1.0
+          ports:
+            - containerPort: 80
+          volumeMounts:
+          - mountPath: "/usr/share/nginx/html"
+            name: kittens-volume
+      volumes:
+      - name: kittens-volume
+        persistentVolumeClaim:
+          claimName: kittens-pv-claim

@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: kittens-pv
+  labels:
+    type: local
+spec:
+  storageClassName: manual
+  capacity:
+    storage: 3Gi
+  accessModes:
+    - ReadWriteOnce
+  hostPath:
+    path: "/home/ubuntu/Project-101-kittens-carousel-static-website-nginx_KUBERNETES
+    # worker-node içerisindeki klasör adı: Project-101-kittens-carousel-static-website-nginx_KUBERNETES
+    # Daha önceden bu klasör oluşturmamış olsan da kendisi oluşacak

@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: kittens-service
+  labels:
+    name: kittens-service
+    app: kittens-static-website
+spec:
+  ports:
+  - port: 80
+    targetPort: 80
+    nodePort: 30333
+  type: NodePort
+  selector:
+     name: kittens-pod
+     app: kittens-static-website
