@@ -1,6 +1,6 @@
 - Worker-node'a git
 
-- Worker-node içerisinde Project-101-kittens-carousel-static-website-nginx_KUBERNETES isimli klasör oluştur ==>> "PersistentVolume"  tanımlarken "hostPath" olarak belirteceğiz. Bu klasörü oluşturmasan da "PersistentVolume" tanımlarken bu klasör kendisi oluşacak.
+- Worker-node içerisinde ``Project-101-kittens-carousel-static-website-nginx_KUBERNETES`` isimli klasör oluştur ==>> ``PersistentVolume``  tanımlarken ``hostPath`` olarak belirteceğiz. Bu klasörü oluşturmasan da "PersistentVolume" tanımlarken bu klasör kendisi oluşacak.
 
 - Master-node'a git
 
