@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: kittens-deploy
-  namespace: kittens-namespace  # sadece bu satır sayesinde bu isimde namespace oluşur
+  namespace: kittens-namespace  # sadece bu satır sayesinde bu isimde namespace oluşur mu ?
   labels:
     name: kittens-deploy
     app: kittens-static-website
