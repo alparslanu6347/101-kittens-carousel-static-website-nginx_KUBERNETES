@@ -10,7 +10,5 @@ spec:
     storage: 3Gi
   accessModes:
     - ReadWriteOnce
-  hostPath:
-    path: "/home/ubuntu/Project-101-kittens-carousel-static-website-nginx_KUBERNETES
-    # worker-node içerisindeki klasör adı: Project-101-kittens-carousel-static-website-nginx_KUBERNETES
-    # Daha önceden bu klasör oluşturmamış olsan da kendisi oluşacak
+  hostPath: # The folder name inside the worker node: Project-101-kittens-carousel-static-website-nginx_KUBERNETES. Even if you haven’t created this folder beforehand, it will be automatically created.
+    path: "/home/ubuntu/Project-101-kittens-carousel-static-website-nginx_KUBERNETES 
